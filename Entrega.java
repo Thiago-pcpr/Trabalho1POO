@@ -1,8 +1,28 @@
-public class Entrega {
-    public Entrega(String nome_cliente, String endereco_cliente, String CNPJ_cliente, int numero_pedido,
-                   String forma_produto, float quantidade_produto, float preco_produto, float valor_pedido,
-                   float valor_entrega
-    ) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Entrega {
+
+    private Cliente cliente_entrega;
+    private List<ItemEntrega> itensEntrega;
+    private float valorTotal;
+
+    public Entrega(Cliente cliente_entrega, List<ItemEntrega> itensEntrega, float valorTotal) {
+        this.cliente_entrega = cliente_entrega;
+        this.itensEntrega = itensEntrega;
+        this.valorTotal = valorTotal;
     }
+
+    public Cliente getCliente_entrega() {
+        return cliente_entrega;
+    }
+
+    public List<ItemEntrega> getItensEntrega() {
+        return itensEntrega;
+    }
+
+    public float getValorTotal() {
+        return valorTotal;
+    }
+
 }
